@@ -43,6 +43,24 @@ public class SparseArray {
             System.out.printf("%d\t%d\t%d\t\n", sparseArr[i][0], sparseArr[i][1], sparseArr[i][2]);
         }
         System.out.println();
+
+        int chessArr2[][] = new int[sparseArr[0][0]][sparseArr[0][1]];
+
+        for(int i = 1; i < sparseArr.length; i++){
+            chessArr2[sparseArr[i][0]][sparseArr[i][1]] = sparseArr[i][2];
+        }
+
+
+        System.out.println();
+        System.out.println("2D Array");
+        for(int[] row : chessArr2){
+            for(int data : row){
+                System.out.printf("%d\t", data);
+            }
+            System.out.println();
+        }
+
+        
     }
 
 }
